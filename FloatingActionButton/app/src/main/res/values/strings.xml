@@ -2,4 +2,6 @@
     <string name="app_name">Floating Action Button</string>
 
     <string name="scroll_aware_fab_behavior">com.example.enclaveit.floatingactionbutton.ScrollAwareFABBehavior</string>
+    <string name="title_toolbar">Learning About FAB</string>
+
 </resources>

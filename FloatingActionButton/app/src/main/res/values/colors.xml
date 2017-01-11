@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="backgroundTintColor">#e91e63</color>
+
+    <!-- Definite a number of color for designing GUI Android -->
+    <color name="backgroundToolbar">#2196f3</color>
+    <color name="titleofToolbar">#e3f2fd</color>
+
 </resources>
