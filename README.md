@@ -25,6 +25,6 @@
 
 
 <p align="center">
-  <img src="https://github.com/danisluis6/Mock-up-Dictionary/blob/version1/1.png">
+  <img src="https://github.com/danisluis6/Material-Design-Floating-Action-Button/blob/version1/1.png">
 </p>
 
