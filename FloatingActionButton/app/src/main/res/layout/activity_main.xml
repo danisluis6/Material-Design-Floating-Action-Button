@@ -10,15 +10,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.enclaveit.floatingactionbutton.MainActivity">
-
+    <ListView
+        android:id="@+id/listToDo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         app:fabSize="normal"
+        app:layout_behavior="@string/scroll_aware_fab_behavior"
         app:backgroundTint="@color/backgroundTintColor"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_gravity="bottom|end"
         android:src="@drawable/ic_mail"
-        android:onClick="showMessageOfMail"
+        app:layout_anchor="@id/listToDo"
+        app:layout_anchorGravity="bottom|center|end"
         android:layout_margin="@dimen/fab_margin"/>
 </android.support.design.widget.CoordinatorLayout>

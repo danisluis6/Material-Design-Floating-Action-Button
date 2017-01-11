@@ -3,31 +3,41 @@ package com.example.enclaveit.floatingactionbutton;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton fab;
+    private ListView listToDoTask;
+
+    private List<String> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         addControlsForNullOfPointer();
+
+        if(createValueForTesting()){
+                listToDoTask.setAdapter(new ArrayAdapter(this,android.R.layout.simple_list_item_1,list));
+        };
+    }
+
+    private boolean createValueForTesting() {
+        boolean valid = true;
+        list = new ArrayList<String>();
+        for(int index = 0;index < 100; index++){
+            list.add("Recycle View");
+        }
+        return valid;
     }
 
     private void addControlsForNullOfPointer() {
         fab = (FloatingActionButton)this.findViewById(R.id.fab);
-    }
-
-    public void showMessageOfMail(View view){
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"Test event on click on mobile",Toast.LENGTH_LONG).show();
-            }
-        });
+        listToDoTask = (ListView)this.findViewById(R.id.listToDo);
     }
 }
